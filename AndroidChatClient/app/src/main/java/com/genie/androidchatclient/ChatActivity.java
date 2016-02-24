@@ -85,7 +85,7 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            mSocket.emit("SENDMESSAGE",object);
+            mSocket.emit("SENDMESSAGE",object.toString());
             messageList.add(editText.getText().toString());
             editText.getText().clear();
             adapter.notifyDataSetChanged();

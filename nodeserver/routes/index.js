@@ -21,10 +21,11 @@ router.get('/', function(req, res, next) {
 io.on('connection', function (client) {
   console.log("connected");
     client.on("add user",function(object) {
-      if (!isUserAlreadyAdded(object)) {
-        var object = {"userid": object.userid, "username": object.username}
-        users.push(object);
-        clients[object.userid]=client;
+      var jsonObject=JSON.parse(object);
+      if (!isUserAlreadyAdded(jsonObject)) {
+        console.log(jsonObject)
+        users.push(jsonObject);
+        clients[jsonObject.userid]=client;
     }
   });
 
@@ -35,14 +36,15 @@ io.on('connection', function (client) {
   })
 
   client.on('SENDMESSAGE', function(data){
-    sendMessagetoClient(clients[data.userid],data.message)
+    var jsonData=JSON.parse(data)
+    sendMessagetoClient(clients[jsonData.userid],jsonData.message)
   });
 
 
 
 
-
   client.on("GET_USERS",function(data){
+    console.log(users)
     io.emit("GET_USER_LIST",users);
   });
 

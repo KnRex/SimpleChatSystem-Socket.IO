@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity  {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            mSocket.emit("add user",object);
+            mSocket.emit("add user",object.toString());
             MainActivity.this.startActivity(new Intent(MainActivity.this,UsersActivity.class));
         }
     };
