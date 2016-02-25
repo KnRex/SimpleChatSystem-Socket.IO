@@ -1,9 +1,11 @@
 package com.genie.androidchatclient;
 
 import android.content.Intent;
+import android.provider.Settings;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,6 +22,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 import io.socket.client.Socket;
 import io.socket.emitter.Emitter;
@@ -80,16 +83,21 @@ public class UsersActivity extends AppCompatActivity implements AdapterView.OnIt
                 @Override
                 public void run() {
 
-                    JSONArray array= (JSONArray) args[0];
-                    Log.v("value",array.length()+"");
+                    String deviceID = UsersActivity.this.getDeviceId();
 
+                    JSONArray array = (JSONArray) args[0];
+                    Log.v("value", array.length() + "");
 
 
                     for (int i = 0; i < array.length(); i++) {
                         try {
-                            JSONObject object= (JSONObject) array.get(i);
-                            list.add(object.getString("username"));
-                            userIdList.add(object.getString("userid"));
+                            JSONObject object = (JSONObject) array.get(i);
+                            if (deviceID.equals(object.getString("userid"))) {
+
+                            } else{
+                                list.add(object.getString("username"));
+                                userIdList.add(object.getString("userid"));
+                            }
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -100,6 +108,30 @@ public class UsersActivity extends AppCompatActivity implements AdapterView.OnIt
             });
         }
     };
+
+    public String getDeviceId() {
+        final TelephonyManager tm = (TelephonyManager) getBaseContext()
+                .getSystemService(UsersActivity.this.TELEPHONY_SERVICE);
+
+        if (tm.getDeviceId() != null) {
+
+            final String tmDevice, tmSerial, androidId;
+            tmDevice = "" + tm.getDeviceId();
+            tmSerial = "" + tm.getSimSerialNumber();
+            androidId = ""
+                    + android.provider.Settings.Secure.getString(
+                    getContentResolver(),
+                    android.provider.Settings.Secure.ANDROID_ID);
+            UUID deviceUuid = new UUID(androidId.hashCode(),
+                    ((long) tmDevice.hashCode() << 32) | tmSerial.hashCode());
+            return deviceUuid.toString();
+        } else {
+            String deviceId = Settings.Secure.getString(getApplicationContext()
+                    .getContentResolver(), Settings.Secure.ANDROID_ID);
+            return deviceId;
+        }
+
+    }
 
     @Override
     protected void onDestroy() {
