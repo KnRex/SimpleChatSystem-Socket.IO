@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/Karthik/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="/Users/Karthik/SimpleChatSystem/AndroidChatClient/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.1-c7f1644f2e28f91daf0cefd9c5c4240db3291b3f.jar" />
+    </item>
+    <item
+        jar="/Users/Karthik/SimpleChatSystem/AndroidChatClient/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/libs/internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="/Users/Karthik/SimpleChatSystem/AndroidChatClient/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.1-72634caacc3d1a4f22f33fcad46896509dc34065.jar" />
+    </item>
+    <item
+        jar="/Users/Karthik/SimpleChatSystem/AndroidChatClient/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="/Users/Karthik/SimpleChatSystem/AndroidChatClient/app/build/intermediates/pre-dexed/debug/classes-52e0d0046d15b41c1e0d51318bb620cc6744bc0c.jar" />
+    </item>
+    <item
+        jar="/Users/Karthik/.gradle/caches/modules-2/files-2.1/io.socket/engine.io-client/0.7.0/c1b1d30e2d2231b2eae1438a44943a409b976dac/engine.io-client-0.7.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c1b1d30e2d2231b2eae1438a44943a409b976dac">
+        <dex dex="/Users/Karthik/SimpleChatSystem/AndroidChatClient/app/build/intermediates/pre-dexed/debug/engine.io-client-0.7.0-853322a102da830c4eed604ae8f94156b48210ad.jar" />
+    </item>
+    <item
+        jar="/Users/Karthik/SimpleChatSystem/AndroidChatClient/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="/Users/Karthik/SimpleChatSystem/AndroidChatClient/app/build/intermediates/pre-dexed/debug/classes-6bfaf66197435c5b79f6926f8dda69443b7283cf.jar" />
+    </item>
+    <item
+        jar="/Users/Karthik/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="/Users/Karthik/SimpleChatSystem/AndroidChatClient/app/build/intermediates/pre-dexed/debug/okio-1.6.0-fcf69c4ad83885c96bd9f81dd8f9e7112228c283.jar" />
+    </item>
+    <item
+        jar="/Users/Karthik/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-ws/3.0.1/bd9b51a0188fc8f14bf840a0d326755545206116/okhttp-ws-3.0.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="bd9b51a0188fc8f14bf840a0d326755545206116">
+        <dex dex="/Users/Karthik/SimpleChatSystem/AndroidChatClient/app/build/intermediates/pre-dexed/debug/okhttp-ws-3.0.1-aed5db6bfa5453162447375d7aeb59d08bb6a5ef.jar" />
+    </item>
+    <item
+        jar="/Users/Karthik/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.0.1/b34c1f2d993044656e87f88970b6818e99e886ba/okhttp-3.0.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="b34c1f2d993044656e87f88970b6818e99e886ba">
+        <dex dex="/Users/Karthik/SimpleChatSystem/AndroidChatClient/app/build/intermediates/pre-dexed/debug/okhttp-3.0.1-a4cc4bae1f09ab619bfd8cbf68bd8551656424d5.jar" />
+    </item>
+    <item
+        jar="/Users/Karthik/.gradle/caches/modules-2/files-2.1/io.socket/socket.io-client/0.7.0/ce278c97bc9f74c7945d647f6d441d6013163362/socket.io-client-0.7.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ce278c97bc9f74c7945d647f6d441d6013163362">
+        <dex dex="/Users/Karthik/SimpleChatSystem/AndroidChatClient/app/build/intermediates/pre-dexed/debug/socket.io-client-0.7.0-7527322241f8e7571f817a66060c9b35f6f85675.jar" />
+    </item>
+
+</items>
